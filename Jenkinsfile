@@ -1,5 +1,10 @@
 pipeline{
     agent any
+
+    tools{
+        //this tool :"M2_home" is installed on my local machine not on docker
+        maven 'M2_home'
+    }
     
     stages {
         stage('Build') {
